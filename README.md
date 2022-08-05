@@ -181,5 +181,5 @@ Handle the following conversion specifiers:
 
 ### Authors &copy;
 
-- Lateef Odufeso
-- Aminu Rabiu 
+- [Lateef Odufeso](https://github.com/Wireless-XZ)
+- [Aminu Rabiu](https://github.com/arabiu033)
