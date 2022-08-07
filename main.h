@@ -16,7 +16,6 @@ typedef struct specifiers
 	int (*f)(va_list args);
 } sp_t;
 
-
 int _printf(const char *format, ...);
 int _putchar(char c);
 
