@@ -1,17 +1,16 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * printf_bin - does binary conversion
- * @b: digit to convert
+ * printf_bin - prints an int in octal form
+ * @b: int to print
  *
- * Return: No. of digits printed
+ * Return: length of the number printed
  */
 int printf_bin(va_list b)
 {
 	unsigned int dig, count = 1, len = 0, temp, x;
 
-	dig = va_arg(b ,unsigned int);
+	dig = va_arg(b, unsigned int);
 	temp = dig;
 
 	while (temp > 1)
