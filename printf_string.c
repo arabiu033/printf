@@ -14,5 +14,5 @@ int printf_string(va_list s)
 	str = va_arg(s, char *);
 	for (x = 0; str[x]; x++)
 		_putchar(str[x]);
-	return (++x);
+	return (x);
 }
