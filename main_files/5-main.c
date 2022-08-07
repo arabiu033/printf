@@ -9,7 +9,7 @@ int main(void)
 {
 	int len1;
 
-	len1 = _printf("%S\n", "Best\nSchool");
+	len1 = _printf("%S\n", "Best\tSchool");
 	printf("%d\n", len1);
 	return (0);
 }
