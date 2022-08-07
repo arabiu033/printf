@@ -8,7 +8,7 @@
  */
 int printf_int(va_list inT)
 {
-	int dig, count = 1, len = 0, temp, x;
+	long int dig, count = 1, len = 0, temp, x;
 
 	dig = va_arg(inT, int);
 	temp = dig;

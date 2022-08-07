@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * printf_unsigned - Returns an unisgined data type.
- * @inT: unsigned int to print
+ * printf_dec - prints an int
+ * @d: int to print
  *
- * Return: length of printed int
+ * Return: 1
  */
-int printf_unsigned(va_list inT)
+int printf_dec(va_list d)
 {
-	unsigned int dig, count = 1, len = 0, temp, x;
+	long int dig, count = 1, len = 0, temp, x;
 
-	dig = va_arg(inT, unsigned int);
+	dig = va_arg(d, int);
 	temp = dig;
 	if (dig < 0)
 	{
