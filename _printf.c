@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 		{"%c", printf_char},
 		{"%s", printf_string},
 		{"%%", printf_37},
-		{"%d", printf_int},
+		{"%d", printf_dec},
 		{"%i", printf_int}
 	};
 	int i = 0, len = 0, p, sig = 1;
