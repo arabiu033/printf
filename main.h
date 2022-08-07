@@ -6,6 +6,7 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <stdlib.h>
+
 /**
  * struct specifiers - handles print formats
  * @sp: hold the specifier
@@ -31,4 +32,7 @@ int printf_hex(va_list heX);
 int printf_HEX(va_list heX);
 int case_l(int val);
 int case_u(int val);
+int printf_exclusive_string(va_list str);
+int printf_hex_aux(int n);
+
 #endif
