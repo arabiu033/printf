@@ -24,7 +24,7 @@ int printf_int(va_list inT)
 		temp = temp / 10;
 		count = count * 10;
 	}
-	while (count != 0)
+	while (count > 0)
 	{
 		x = dig / count;
 		dig = dig % count;
