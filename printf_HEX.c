@@ -30,7 +30,7 @@ int printf_HEX(va_list heX)
 }
 
 /**
- * case - determine val fox hexdecima
+ * case_u - determine val fox hexdecima
  * @val: value to use
  * Return: char
  */
