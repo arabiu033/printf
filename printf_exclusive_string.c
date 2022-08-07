@@ -24,7 +24,7 @@ int printf_exclusive_string(va_list str)
 			if (s[i] < 16)
 				_putchar('0');
 			len += printf_hex_aux(s[i]);
-			len += 1;
+			len += 2;
 			continue;
 		}
 		_putchar(s[i]);
