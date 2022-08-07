@@ -35,6 +35,6 @@ int case_u(int val);
 int printf_exclusive_string(va_list str);
 int printf_hex_aux(int n);
 int printf_pointer(va_list p);
-int printf_HEX__aux(int n);
+int printf_HEX_aux(int n);
 
 #endif
