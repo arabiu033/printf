@@ -31,6 +31,7 @@ int printf_exclusive_string(va_list str)
 			continue;
 		}
 		_putchar(s[i]);
+		++len;
 	}
-	return (i + len);
+	return (len);
 }
