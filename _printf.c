@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 		{"%%", printf_37},
 		{"%d", printf_dec},
 		{"%i", printf_int},
-		{"%b", printf_bin}
+		{"%b", printf_bin},
 		{"%u", printf_unsigned},
 		{"%o", printf_oct}
 	};
