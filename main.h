@@ -26,5 +26,8 @@ int printf_dec(va_list d);
 int printf_37(va_list percentage);
 int printf_unsigned(va_list inT);
 int printf_oct(va_list ocT);
-
+int printf_hex(va_list heX);
+int printf_HEX(va_list heX);
+int case_l(int val);
+int case_u(int val);
 #endif
