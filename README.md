@@ -137,7 +137,6 @@ Specifier                |Output                        |Examples |
 
 |Name                |Information                        |Relevant Files                         |
 |----------------|-------------------------------|-----------------------------|
-|`man_3_printf`|Man page of the _printf() function.| `None` |
 |`main.h`	| Header file with the data type struct, standard libraries and custom prototypes.| `*.c compilation` |
 |`_printf.c`|Main printf function file. Calls other functions.|`printf_(name of var).c file` |
 |`printf_37.c`|Contains percentage print function.|`None` |
@@ -176,6 +175,19 @@ Handle the following conversion specifiers:
 Handle the following conversion specifiers:
 - d
 - i
+
+2. ###### With a face like mine, I do better in print
+Handle the following conversion specifiers:
+- b
+
+3. ###### What one has not experienced, one will never understand in print
+Handle the following conversion specifiers:
+- u
+- x
+- o
+- x
+- X
+
 
 (Additionals task to be added upon completion here...)
 
