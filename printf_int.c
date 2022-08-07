@@ -8,7 +8,7 @@
  */
 int printf_int(va_list inT)
 {
-	int dig, count = 1, n = 0, temp, x;
+	int dig, count = 1, len = 0, temp, x;
 
 	dig = va_arg(inT, int);
 	temp = dig;
@@ -30,7 +30,7 @@ int printf_int(va_list inT)
 		dig = dig % count;
 		count = count / 10;
 		_putchar('0' + x);
-		n++;
+		len++;
 	}
-	return (n);
+	return (len);
 }
