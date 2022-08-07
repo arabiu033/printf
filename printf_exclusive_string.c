@@ -17,7 +17,7 @@ int printf_exclusive_string(va_list str)
 		s = "(null)";
 	for (i = 0; s[i]; i++)
 	{
-		if ((s[i] > 0 && s[i] < 32) || s[i] >= 127)
+		if (s[i] < 32 || s[i] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
@@ -28,7 +28,6 @@ int printf_exclusive_string(va_list str)
 			continue;
 		}
 		_putchar(s[i]);
-		++len;
 	}
-	return (len);
+	return (i + len);
 }
