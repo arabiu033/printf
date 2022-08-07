@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * printf_hex - prints an int in octal form
+ * printf_pointer - prints an int in octal form
  * @p: int to print
  *
  * Return: length of the number printed
  */
 int printf_pointer(va_list p)
 {
-	unsigned int dig, count = 1, len = 0, temp, x;
+	unsigned long int dig, count = 1, len = 0, temp, x;
 
-	dig = va_arg(p, unsigned int);
+	dig = va_arg(p, unsigned long int);
 	temp = dig;
 	_putchar('0');
 	_putchar('x');
