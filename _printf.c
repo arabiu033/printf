@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 		{"%s", printf_string},
 		{"%%", printf_37},
 		{"%d", printf_int},
-		{"%i", printf_int}
+		{"%i", printf_int},
+		{"%u", printf_unsigned}
 	};
 	int i = 0, len = 0, p, sig = 1;
 	va_list vars;
@@ -25,7 +26,7 @@ int _printf(const char *format, ...)
 	while (format[i])
 	{
 		p = 0;
-		while (p < 5)
+		while (p < 6)
 		{
 			if (speci[p].sp[0] == format[i] &&
 			    speci[p].sp[1] == format[i + 1])

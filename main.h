@@ -23,5 +23,6 @@ int printf_char(va_list ch);
 int printf_string(va_list s);
 int printf_int(va_list inT);
 int printf_37(va_list percentage);
+int printf_unsigned(va_list inT);
 
 #endif
