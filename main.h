@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <limits.h>
-
+#include <stdlib.h>
 /**
  * struct specifiers - handles print formats
  * @sp: hold the specifier
