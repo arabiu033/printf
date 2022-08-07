@@ -2,12 +2,12 @@
 
 /**
  * printf_char - print a char
- * @c: char to print
+ * @ch: char to print
  *
  * Return: no. of characters printed
  */
-int printf_char(va_list c)
+int printf_char(va_list ch)
 {
-	_putchar(va_arg(c, int));
+	_putchar(va_arg(ch, int));
 	return (1);
 }
