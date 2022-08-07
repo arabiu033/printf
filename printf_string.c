@@ -10,7 +10,7 @@ int printf_string(va_list s)
 {
 	char *str;
 	char null[] = "(null)";
-	int x = 0;
+	int i, x = 0;
 
 	str = va_arg(s, char *);
 	if (str != "" && str != NULL)
