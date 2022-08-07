@@ -8,7 +8,7 @@
  */
 int printf_hex(va_list heX)
 {
-	unsigned int dig, count = 1, len = 0, temp, x;
+	unsigned long int dig, count = 1, len = 0, temp, x;
 
 	dig = va_arg(heX, unsigned int);
 	temp = dig;
@@ -34,7 +34,7 @@ int printf_hex(va_list heX)
  * @val: value to use
  * Return: char
  */
-int case_l(int val)
+int case_l(unsigned long int val)
 {
 	switch (val)
 	{

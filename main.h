@@ -30,13 +30,11 @@ int printf_unsigned(va_list inT);
 int printf_oct(va_list ocT);
 int printf_hex(va_list heX);
 int printf_HEX(va_list heX);
-int case_l(int val);
-int case_u(int val);
+int case_l(unsigned long int val);
+int case_u(unsigned long int val);
 int printf_exclusive_string(va_list str);
-int printf_hex_aux(int n);
+int printf_hex_aux(unsigned long int n);
 int printf_pointer(va_list p);
-int case_l(int val);
-int printf_HEX_aux(int n);
-int printf_hex_aux(int a);
+int printf_HEX_aux(unsigned long int n);
 
 #endif

@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * printf_HEX_aux - prints an int in octal form
+ * printf_hex_aux - prints an int in octal form
  * @n: int to print
  *
  * Return: length of the number printed
  */
-int printf_HEX_aux(unsigned long int n)
+int printf_hex_aux(unsigned long int n)
 {
 	unsigned long int dig, count = 1, len = 0, temp, x;
 
@@ -23,7 +23,7 @@ int printf_HEX_aux(unsigned long int n)
 		x = dig / count;
 		dig = dig % count;
 		count = count / 16;
-		_putchar(case_u(x));
+		_putchar(case_l(x));
 		len++;
 	}
 	return (len);
