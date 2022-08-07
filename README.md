@@ -137,7 +137,6 @@ Specifier                |Output                        |Examples |
 
 |Name                |Information                        |Relevant Files                         |
 |----------------|-------------------------------|-----------------------------|
-|`man_3_printf`|Man page of the _printf() function.| `None` |
 |`main.h`	| Header file with the data type struct, standard libraries and custom prototypes.| `*.c compilation` |
 |`_printf.c`|Main printf function file. Calls other functions.|`printf_(name of var).c file` |
 |`printf_37.c`|Contains percentage print function.|`None` |
