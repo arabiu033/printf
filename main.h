@@ -7,7 +7,7 @@
 #include <limits.h>
 
 /**
- * struct specifiers
+ * struct specifiers - handles print formats
  * @sp: hold the specifier
  * @f: function to call for the specifier
  */

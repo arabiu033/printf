@@ -9,10 +9,22 @@
 int printf_string(va_list s)
 {
 	char *str;
-	int x;
+	char null[] = "(null)";
+	int x = 0;
 
 	str = va_arg(s, char *);
-	for (x = 0; str[x]; x++)
-		_putchar(str[x]);
+	if (str != "" && str != NULL)
+	{
+		for (x = 0; str[x]; x++)
+		{
+			_putchar(str[x]);
+		}
+	}
+	if (str == NULL)
+	{
+		for (i = 0; null[i]; i++)
+			_putchar(null[i]);
+		return (i);
+	}
 	return (x);
 }
