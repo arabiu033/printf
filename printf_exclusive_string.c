@@ -22,7 +22,10 @@ int printf_exclusive_string(va_list str)
 			_putchar('\\');
 			_putchar('x');
 			if (s[i] < 16)
+			{
+				++len;
 				_putchar('0');
+			}
 			len += printf_hex_aux(s[i]);
 			len += 2;
 			continue;
