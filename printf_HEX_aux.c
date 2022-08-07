@@ -6,7 +6,7 @@
  *
  * Return: length of the number printed
  */
-int printf_hex_aux(int n)
+int printf_HEX_aux(int n)
 {
 	unsigned int dig, count = 1, len = 0, temp, x;
 

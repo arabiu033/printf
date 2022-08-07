@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	int len1;
-
-	len1 = _printf("%S\n", "Best\tSchool");
-	printf("%d\n", len1);
+	int i = 5;
+	int j = (int)&i + 5;
+	int g = (int) j * 5;
+	_printf("%b\n", 98);
 	return (0);
 }
