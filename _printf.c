@@ -14,5 +14,38 @@ int _printf(const char *format, ...)
 		{"%%", printf_37},
 		{"%d", printf_int},
 		{"%i", printf_int}
+	};
+	int i = 0, len = 0, p, sig = 1;
+	va_list vars;
+
+	va_start(vars, format);
+	if (!format)
+		return (-1);
+
+	while (format[i])
+	{
+		p = 0;
+		while (p < 5)
+		{
+			if (speci[p].sp[0] == format[i] &&
+			    speci[p].sp[1] == format[i + 1])
+			{
+				len += speci[j].f(vars);
+				i += 2;
+				sig = 0;
+				break;
+			}
+
+			++p;
+		}
+		if (sig)
+		{
+			_putchar(format[i]);
+			++len;
+			++i;
+		}
+		sig = 1;
 	}
+	va_end(vars);
+	return (len);
 }
