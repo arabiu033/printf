@@ -19,7 +19,7 @@ typedef struct specifiers
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int printf_char(va_list c);
+int printf_char(va_list ch);
 int printf_string(va_list s);
 int printf_int(va_list inT);
 int printf_37(va_list percentage);
