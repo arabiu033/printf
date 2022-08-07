@@ -6,10 +6,8 @@
  *
  * Return: 1
  */
-int printf_37(va_list per)
+int printf_37(va_list per __attribute__((unused)))
 {
-	int i = va_arg(per, int);
-
 	_putchar(37);
 	return (1);
 }

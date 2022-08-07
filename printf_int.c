@@ -17,6 +17,7 @@ int printf_int(va_list inT)
 		_putchar('-');
 		dig = dig * -1;
 		temp = dig;
+		++n;
 	}
 	while (temp > 9)
 	{

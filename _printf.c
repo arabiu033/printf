@@ -8,7 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	sp_t speci = {
+	sp_t speci[] = {
 		{"%c", printf_char},
 		{"%s", printf_string},
 		{"%%", printf_37},
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			if (speci[p].sp[0] == format[i] &&
 			    speci[p].sp[1] == format[i + 1])
 			{
-				len += speci[j].f(vars);
+				len += speci[p].f(vars);
 				i += 2;
 				sig = 0;
 				break;
