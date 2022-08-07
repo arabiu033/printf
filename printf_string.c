@@ -13,14 +13,14 @@ int printf_string(va_list s)
 	int i, x = 0;
 
 	str = va_arg(s, char *);
-	if (str != "" && str != NULL)
+	if (str != NULL)
 	{
 		for (x = 0; str[x]; x++)
 		{
 			_putchar(str[x]);
 		}
 	}
-	if (str == NULL)
+	else if (str == NULL)
 	{
 		for (i = 0; null[i]; i++)
 			_putchar(null[i]);
