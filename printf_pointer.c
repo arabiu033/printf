@@ -17,7 +17,7 @@ int printf_pointer(va_list p)
 	if (!dig)
 	{
 		for (i = 0; i < 5; i++)
-			_putchar('0' + str[i]);
+			_putchar(str[i]);
 		return (5);
 	}
 	_putchar('0');
