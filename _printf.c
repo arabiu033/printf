@@ -15,9 +15,9 @@ int _printf(const char *format, ...)
 		{"X", printf_HEX},{"S", printf_exclusive_string},
 		{"p", printf_pointer}, {"R", printf_rot13}, {"r", printf_srev}
 	};
-	int i = 0, len = 0, p, sig = 1;
+	int i = 0, len = 0, p, sig = 1, y = 0;
 	va_list vars;
-	char flags[3] = {'$', '$', '$'};
+	char flags[5] = {'$', '$', '$', '$', '$'};
 
 	va_start(vars, format);
 	if (!format || (format[0] == '%' && format[1] == '\0'))
@@ -27,6 +27,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			y = 0;
 			while (sig1)
 			{
 
@@ -43,6 +44,8 @@ int _printf(const char *format, ...)
 					}
 					else if (format[x] == 'h' || format[x] == 'l')
 					{
+						flags[y] = format[x];
+						++y;
 						++x;
 						++i
 						p = -1;
@@ -54,6 +57,7 @@ int _printf(const char *format, ...)
 				if (sig1 && checker(format[x]))
 				{
 					flags[y] = format[x];
+					++y;
 					++i;
 				}
 				else
@@ -67,6 +71,7 @@ int _printf(const char *format, ...)
 			++i;
 		}
 		sig = 1;
+		flags = {'$', '$', '$', '$', '$'};
 	}
 	va_end(vars);
 	return (len);
