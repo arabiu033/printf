@@ -37,13 +37,14 @@ int _printf(const char *format, ...)
 					if (speci[p].sp == format[x])
 					{
 						len += speci[p].f(vars, flags);
-						i += 2;
+						++i;
 						sig = 0;
 						break;
 					}
 					else if (format[x] == 'h' || format[x] == 'l')
 					{
 						++x;
+						++i
 						p = -1;
 					}
 
@@ -56,26 +57,10 @@ int _printf(const char *format, ...)
 					++i;
 				}
 				else
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					
-				if (sig)
+					sig1 = 0;
+			}
+		}
+		if (sig)
 		{
 			_putchar(format[i]);
 			++len;
