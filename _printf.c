@@ -44,7 +44,6 @@ int _printf(const char *format, ...)
 				sig = 0;
 				break;
 			}
-
 			++p;
 		}
 		if (sig)
