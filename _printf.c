@@ -56,7 +56,7 @@ int _printf(const char *format, ...)
 					++p;
 				}
 
-				if (sig1 && checker(format[x]))
+				if (sig1 && checker(format[x], flags, y))
 				{
 					flags[y] = format[x];
 					++y;
