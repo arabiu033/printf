@@ -10,7 +10,7 @@ int printf_pointer(va_list p)
 {
 	unsigned long int dig;
 	int len = 0, i;
-	char str[6] = "(nil)";
+	char = "(nil)";
 
 	dig = va_arg(p, unsigned long int);
 
