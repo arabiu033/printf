@@ -43,7 +43,7 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%q]\n");
-	printf("Unknown:[%r]\n");
+	printf("Unknown:[%q]\n");
 	len = _printf("%i\n", INT_MIN);
 	len2 = printf("%i\n", INT_MIN);
 	len = _printf("%d\n", INT_MIN);
