@@ -14,13 +14,12 @@ int printf_pointer(va_list p)
 
 	dig = va_arg(p, unsigned long int);
 
-	if (dig == NULL)
+	if (!dig)
 	{
 		for (i = 0; i < 5; i++)
 			_putchar('0' + str[i]);
 		return (5);
 	}
-	
 	_putchar('0');
 	_putchar('x');
 
