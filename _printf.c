@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 		{'c', printf_char}, {'s', printf_string}, {'%', printf_37},
 		{'d', printf_dec}, {'i', printf_int}, {'b', printf_bin},
 		{'u', printf_unsigned}, {'o', printf_oct}, {'x', printf_hex},
-		{'x', printf_HEX},{'S', printf_exclusive_string},
+		{'X', printf_HEX},{'S', printf_exclusive_string},
 		{'p', printf_pointer}, {'R', printf_rot13}, {'r', printf_srev}
 	};
 	int i = 0, len = 0, p, sig = 1, y = 0, sig1 = 1, k, x;
@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 					if (speci[p].sp == format[x])
 					{
 						len += speci[p].f(vars, flags);
-						++i;
+						i += 2;
 						sig = 0;
 						sig1 = 0;
 						break;
@@ -62,7 +62,7 @@ int _printf(const char *format, ...)
 					++y;
 					++i;
 				}
-				else
+				else if (sig1)
 				{
 					sig1 = 0;
 					i = k;
@@ -76,7 +76,9 @@ int _printf(const char *format, ...)
 			++i;
 		}
 		sig = 1;
-		flags[5] = [{'$', '$', '$', '$', '$'}];
+		sig1 = 1;
+		for (y = 0; y < 5; y++)
+			flags[y] = '$';
 	}
 	va_end(vars);
 	return (len);
