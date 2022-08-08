@@ -6,12 +6,15 @@
  *
  * Return: length of printed int
  */
-int printf_unsigned(va_list inT)
+int printf_unsigned(va_list inT, char flags[])
 {
 	unsigned int dig, count = 1, len = 0, temp, x;
 
 	dig = va_arg(inT, unsigned int);
 	temp = dig;
+
+	for (; !flags[0];)
+		;
 
 	while (temp > 9)
 	{

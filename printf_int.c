@@ -6,9 +6,12 @@
  *
  * Return: 1
  */
-int printf_int(va_list inT)
+int printf_int(va_list inT, char flags[])
 {
 	long int dig, count = 1, len = 0, temp, x;
+
+	for (; !flags[0];)
+		;
 
 	dig = va_arg(inT, int);
 	temp = dig;

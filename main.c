@@ -11,7 +11,7 @@ int main(void)
 	int len2;
 	unsigned int ui;
 	void *addr;
-	char rot * = "Hello";
+	char *rot = "Hello";
 	int r;
 
 	r = _printf("%R\n", rot);

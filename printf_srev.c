@@ -6,10 +6,13 @@
  *
  * Return: number of characters printed
  */
-int printf_srev(va_list r)
+int printf_srev(va_list r, char flags[])
 {
 	int i, n = 0;
 	char *str;
+
+	for (; !flags[0];)
+		;
 
 	str = va_arg(r, char *);
 	if (!str)

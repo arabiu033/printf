@@ -76,7 +76,7 @@ int _printf(const char *format, ...)
 			++i;
 		}
 		sig = 1;
-		flags[5] = [{'$', '$', '$', '$', '$'}];
+		flags[5] = [{'$', '$', '$', '$', '$'};
 	}
 	va_end(vars);
 	return (len);

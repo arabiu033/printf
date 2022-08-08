@@ -6,12 +6,15 @@
  *
  * Return: the number of characters printed
  */
-int printf_rot13(va_list R)
+int printf_rot13(va_list R, char flags[])
 {
 	unsigned int i, j, count = 0;
 	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *str;
+
+	for (; !flags[0];)
+		;
 
 	str = va_arg(R, char *);
 	if (!str)

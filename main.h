@@ -14,7 +14,7 @@
  */
 typedef struct specifiers
 {
-	char *sp;
+	char sp;
 	int (*f)(va_list args, char flags[]);
 } sp_t;
 
@@ -38,5 +38,5 @@ int printf_pointer(va_list p, char flags[]);
 int printf_HEX_aux(unsigned long int n);
 int printf_rot13(va_list R, char flags[]);
 int printf_srev(va_list r, char flags[]);
-
+int checker(char c, char flags[], int l);
 #endif

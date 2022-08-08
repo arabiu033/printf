@@ -6,9 +6,12 @@
  *
  * Return: length of the number printed
  */
-int printf_hex(va_list heX)
+int printf_hex(va_list heX, char flags[])
 {
 	unsigned long int dig, count = 1, len = 0, temp, x;
+
+	for (; !flags[0];)
+		;
 
 	dig = va_arg(heX, unsigned int);
 	temp = dig;
