@@ -20,7 +20,8 @@ int _printf(const char *format, ...)
 		{"%x", printf_hex},
 		{"%X", printf_HEX},
 		{"%S", printf_exclusive_string},
-		{"%p", printf_pointer}
+		{"%p", printf_pointer},
+		{"%R", printf_rot13}
 	};
 	int i = 0, len = 0, p, sig = 1;
 	va_list vars;
@@ -32,7 +33,7 @@ int _printf(const char *format, ...)
 	while (format[i])
 	{
 		p = 0;
-		while (p < 12)
+		while (p < 13)
 		{
 			if (speci[p].sp[0] == format[i] &&
 			    speci[p].sp[1] == format[i + 1])
