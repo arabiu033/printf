@@ -43,14 +43,16 @@ int flag_checker(char f, long int dig, char func)
 	case '+':
 		if (dig > 0)
 		{
-			_putchar('+');
+			if (func == '$')
+				_putchar('+');
 			return (1);
 		}
 		return (0);
 	case ' ':
 		if (dig > 0)
 		{
-			_putchar(' ');
+			if (func == '$')
+				_putchar(' ');
 			return (1);
 		}
 		return (0);
