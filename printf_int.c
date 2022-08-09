@@ -28,7 +28,7 @@ int printf_int(va_list inT, char flags[])
  */
 int short_i(va_list t)
 {
-	short int dig, count = 1, len = 0, temp, x;
+	int dig, count = 1, len = 0, temp, x;
 
 	dig = va_arg(t, int);
 	temp = dig;
@@ -65,7 +65,7 @@ int long_i(va_list t)
 {
 	long int dig, count = 1, len = 0, temp, x;
 
-	dig = va_arg(t, int);
+	dig = va_arg(t, long int);
 	temp = dig;
 	if (dig < 0)
 	{
