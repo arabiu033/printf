@@ -10,15 +10,15 @@
 int printf_hex(va_list heX, char flags[])
 {
 	unsigned long int dig, count = 1, len = 0, temp, x, i;
-	char l;
+	char l = '$';
 
 	for (i = 0; flags[i] != '$'; i++)
 		if (flags[i] == 'h' || flags[i] == 'l')
 			l = flags[i];
-	if (l == 'h')
-		dig = va_arg(heX, unsigned int);
-	else
+	if (l == 'l')
 		dig = va_arg(heX, unsigned long int);
+	else
+		dig = va_arg(heX, unsigned int);
 
 	temp = dig;
 

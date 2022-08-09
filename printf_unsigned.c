@@ -15,10 +15,10 @@ int printf_unsigned(va_list inT, char flags[])
 	for (i = 0; flags[i] != '$'; i++)
 		if (flags[i] == 'h' || flags[i] == 'l')
 			l = flags[i];
-	if (l == 'h')
-		dig = va_arg(inT, unsigned int);
-	else
+	if (l == 'l')
 		dig = va_arg(inT, unsigned long int);
+	else
+		dig = va_arg(inT, unsigned int);
 
 	temp = dig;
 
