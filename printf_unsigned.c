@@ -8,13 +8,13 @@
  */
 int printf_unsigned(va_list inT, char flags[])
 {
-	unsigned int dig, count = 1, len = 0, temp, x;
+	unsigned int dig, count = 1, len = 0, temp, x, i;
 
 	dig = va_arg(inT, unsigned int);
 	temp = dig;
 
-	for (; !flags[0];)
-		;
+	for (i = 0; flags[i] != '$'; i++)
+		_putchar(flags[i]);
 
 	while (temp > 9)
 	{

@@ -27,7 +27,7 @@ int main(void)
 	len2 = printf("Negative:[%i]\n", 4858585585599559);
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
-	_printf("Unsigned:[%u]\n", UINT_MAX);
+	_printf("Unsigned:[%4 6hu]\n", UINT_MAX);
 	printf("Unsigned:[%u]\n", UINT_MAX);
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
