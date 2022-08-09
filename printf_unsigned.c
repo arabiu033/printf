@@ -3,24 +3,24 @@
 /**
  * printf_unsigned - Returns an unisgined data type.
  * @inT: unsigned int to print
+ * @flags: flags
  *
  * Return: length of printed int
  */
 int printf_unsigned(va_list inT, char flags[], int n)
 {
 	unsigned long int dig, count = 1, len = 0, temp, x, i;
-
-	if (n == 0)
-		dig = va_arg(inT, unsigned int);
-	else if (n == 1)
-		dig = va_arg(inT, unsigned int);
-	else if (n == 2)
-		dig = va_arg(inT, unsigned long int);
-
-	temp = dig;
+	char l;
 
 	for (i = 0; flags[i] != '$'; i++)
-		_putchar(flags[i]);
+		if (flags[i] == 'h' || flags[i] == 'l')
+			l = flags[i];
+	if (l == 'l')
+		dig = va_arg(inT, unsigned long int);
+	else
+		dig = va_arg(inT, unsigned int);
+
+	temp = dig;
 
 	while (temp > 9)
 	{

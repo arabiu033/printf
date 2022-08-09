@@ -14,7 +14,7 @@ int main(void)
 	char *rot = "Hello";
 	int r;
 
-	_printf("%999li\n");
+	printf("%9li\n");
 	r = _printf("%R\n", rot);
 	_printf("%d\n", r);
 	len = _printf("Let's try to printf a simple sentence.\n");

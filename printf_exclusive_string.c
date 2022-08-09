@@ -5,6 +5,7 @@
  * or >= 127) are printed this way: \x, followed by the ASCII code value in
  * hexadecimal (upper case - always 2 characters)
  * @str: string argument
+ * @flags: flags
  * Return: length printed
  */
 int printf_exclusive_string(va_list str, char flags[], int n)

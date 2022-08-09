@@ -3,22 +3,25 @@
 /**
  * printf_dec - prints an int
  * @d: int to print
+ * @flags: flags
  *
  * Return: 1
  */
 int printf_dec(va_list d, char flags[], int n)
 {
-	long int dig, count = 1, len = 0, temp, x;
+	long int dig, count = 1, len = 0, temp, x, i;
 
-	for (; !flags[0];)
-		;
+	char l = '$';
 
-	if (n == 0)
-		dig = va_arg(d, int);
-	else if (n == 1)
-		dig = va_arg(d, int);
-	else if (n == 2)
+	for (i = 0; flags[i] != '$'; i++)
+		if (flags[i] == 'h' || flags[i] == 'l')
+			l = flags[i];
+	if (l == 'l')
 		dig = va_arg(d, long int);
+	else if (l == 'h')
+		dig = (short)va_arg(d, int);
+	else
+		dig = va_arg(d, int);
 
 	temp = dig;
 	if (dig < 0)
