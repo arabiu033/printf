@@ -23,7 +23,7 @@ int printf_int(va_list inT, char flags[])
 		dig = va_arg(inT, int);
 
 	for (i = 0; flags[i] != '$'; i++)
-		len += flag_checker(flags[i], dig, '$');
+			len += flag_checker(flags[i], dig, '$');
 
 	temp = dig;
 	if (dig < 0)

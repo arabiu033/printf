@@ -12,10 +12,10 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 	char *rot = "Hello";
-	int r, a = 127, aa, bb;
+	long int r, a = LONG_MIN, aa, bb;
 
-	bb = printf("%llld\n", a);
-	aa = _printf("%llld\n", a);
+	bb = printf("%ld\n", a);
+	aa = _printf("%ld\n", a);
 	printf("%d\n", bb);
 	_printf("%d\n", aa);
 	r = _printf("%R\n", rot);
@@ -24,14 +24,23 @@ int main(void)
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	ui = (unsigned int)INT_MAX + 1024;
 	addr = (void *)0x7ffe637541f0;
+	_printf("Length:[%d, %i]\n", len, len);
+	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("Length:[%++++d, %   i]\n", len, len);
 	printf("Length:[%++++d, %   i]\n", len2, len2);
 	len = _printf("Negative:[%d]\n", 4858585585599559);
 	len2 = printf("Negative:[%i]\n", 4858585585599559);
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
+<<<<<<< HEAD:main_files/main.c
 	_printf("Unsigned:[%hhhhhhhhu]\n", UINT_MAX);
 	printf("Unsigned:[%hhhhhhhhu]\n", UINT_MAX);
+=======
+	_printf("Unsigned:[%u]\n", UINT_MAX);
+	printf("Unsigned:[%u]\n", UINT_MAX);
+	_printf("Unsigned:[%hhhhu]\n", UINT_MAX);
+	printf("Unsigned:[%hhhhu]\n", UINT_MAX);
+>>>>>>> 3d0b6082fbed572bf1907f221edf5e3d54f8bd2c:main.c
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
 	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
