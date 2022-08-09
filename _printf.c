@@ -51,21 +51,20 @@ int _printf(const char *format, ...)
 						 && checker(format[x],
 							    flags, y))
 					{
-						if (y != 0 &&
-						    flags[y - 1] == format[x])
-						{
+					if (y != 0 && flags[y - 1] == format[x])
+					{
 						++x;
 						++i;
 						p = -1;
-						}
-						else
-						{
+					}
+					else
+					{
 						flags[y] = format[x];
 						++y;
 						++x;
 						++i;
 						p = -1;
-						}
+					}
 					}
 
 					++p;

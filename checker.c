@@ -11,10 +11,10 @@ void dummyx(void);
  */
 int checker(char c, char fl[], int l)
 {
-	int i;
+	int i, j;
 	char *valid_flags = "hl-+ #0";
 
-	if ((c >= '0' && c <= '9') || (c = ' ' || c == '#' || c == '+'))
+	if ((c >= '0' && c <= '9') || (c == ' ' || c == '#' || c == '+'))
 		return (1);
 	j = 0;
 	for (i = 0; i < l; i++)
