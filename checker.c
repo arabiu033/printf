@@ -10,6 +10,7 @@
 int checker(char c, char fl[], int l)
 {
 	int i;
+	char *valid_flags = "disrRuoxXpbc%S";
 
 	if (c >= '0' && c <= '9')
 		return (1);
@@ -19,5 +20,10 @@ int checker(char c, char fl[], int l)
 			if (c == fl[i])
 				return (0);
 	}
-	return (1);
+	for (i = 0; valid_flags[i]; i++)
+	{
+		if (c == valid_flags[i])
+			return (1);
+	}
+	return (0);
 }

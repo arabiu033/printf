@@ -9,9 +9,12 @@
 int printf_int(va_list inT, char flags[])
 {
 	long int dig, count = 1, len = 0, temp, x;
+	int i;
 
-	for (; !flags[0];)
-		;
+	for (i = 0; flags[i] != '$'; i++)
+	{
+		_putchar(flags[i]);
+	}
 
 	dig = va_arg(inT, int);
 	temp = dig;
