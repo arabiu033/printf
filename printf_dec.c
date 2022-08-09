@@ -18,6 +18,8 @@ int printf_dec(va_list d, char flags[])
 			l = flags[i];
 	if (l == 'l')
 		dig = va_arg(d, long int);
+	else if (l == 'h')
+		dig = (short)va_arg(d, int);
 	else
 		dig = va_arg(d, int);
 
