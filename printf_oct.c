@@ -9,12 +9,17 @@
  */
 int printf_oct(va_list ocT, char flags[])
 {
-	unsigned int dig, count = 1, len = 0, temp, x;
+	unsigned long int dig, count = 1, len = 0, temp, x, i;
+	char l = '$';
 
-	for (; !flags[0]; )
-		;
+	for (i = 0; flags[i] != '$'; i++)
+		if (flags[i] == 'h' || flags[i] == 'l')
+			l = flags[i];
+	if (l == 'l')
+		dig = va_arg(ocT, unsigned long int);
+	else
+		dig = va_arg(ocT, unsigned int);
 
-	dig = va_arg(ocT, unsigned int);
 	temp = dig;
 
 	while (temp > 7)
