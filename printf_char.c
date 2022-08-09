@@ -7,7 +7,7 @@
  *
  * Return: no. of characters printed
  */
-int printf_char(va_list ch, char flags[], int n)
+int printf_char(va_list ch, char flags[])
 {
 	if (n == 0)
 	{

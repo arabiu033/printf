@@ -7,7 +7,7 @@
  *
  * Return: number of characters printed
  */
-int printf_srev(va_list r, char flags[], int n)
+int printf_srev(va_list r, char flags[])
 {
 	int i, x = 0;
 	char *str;
