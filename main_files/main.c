@@ -12,10 +12,10 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 	char *rot = "Hello";
-	int r, a = 127, aa, bb;
+	int r, a = -127, aa, bb;
 
-	bb = printf("%llld\n", a);
-	aa = _printf("%llld\n", a);
+	bb = printf("%#o\n", a);
+	aa = _printf("%#o\n", a);
 	printf("%d\n", bb);
 	_printf("%d\n", aa);
 	r = _printf("%R\n", rot);
@@ -26,12 +26,16 @@ int main(void)
 	addr = (void *)0x7ffe637541f0;
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
+	_printf("Length:[%++++d, %   i]\n", len, len);
+	printf("Length:[%++++d, %   i]\n", len2, len2);
 	len = _printf("Negative:[%d]\n", 4858585585599559);
 	len2 = printf("Negative:[%i]\n", 4858585585599559);
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
-	_printf("Unsigned:[%hu]\n", UINT_MAX);
-	printf("Unsigned:[%hu]\n", UINT_MAX);
+	_printf("Unsigned:[%u]\n", UINT_MAX);
+	printf("Unsigned:[%u]\n", UINT_MAX);
+	_printf("Unsigned:[%hhhhu]\n", UINT_MAX);
+	printf("Unsigned:[%hhhhu]\n", UINT_MAX);
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
 	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
