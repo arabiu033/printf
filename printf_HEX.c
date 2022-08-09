@@ -17,6 +17,8 @@ int printf_HEX(va_list heX, char flags[])
 			l = flags[i];
 	if (l == 'l')
 		dig = va_arg(heX, unsigned long int);
+	else if (l == 'h')
+		dig = (unsigned short int)va_arg(heX, unsigned int);
 	else
 		dig = va_arg(heX, unsigned int);
 
