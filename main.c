@@ -14,6 +14,7 @@ int main(void)
 	char *rot = "Hello";
 	int r;
 
+	_printf("%999li\n");
 	r = _printf("%R\n", rot);
 	_printf("%d\n", r);
 	len = _printf("Let's try to printf a simple sentence.\n");
@@ -42,8 +43,8 @@ int main(void)
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-	_printf("Unknown:[%q]\n");
-	printf("Unknown:[%q]\n");
+	_printf("Unknown:[%w]\n");
+	printf("Unknown:[%w]\n");
 	len = _printf("%i\n", INT_MIN);
 	len2 = printf("%i\n", INT_MIN);
 	len = _printf("%d\n", INT_MIN);
