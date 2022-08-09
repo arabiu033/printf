@@ -45,7 +45,10 @@ int _printf(const char *format, ...)
 						sig1 = 0;
 						break;
 					}
-					else if ((format[x] == 'h' || format[x] == 'l') && checker(format[x], flags, y))
+					else if ((format[x] == 'h'
+						  || format[x] == 'l')
+						 && checker(format[x],
+							    flags, y))
 					{
 						flags[y] = format[x];
 						++y;

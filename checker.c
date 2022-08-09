@@ -1,5 +1,7 @@
 #include "main.h"
 
+void dummyx(void);
+
 /**
  * checker - determine if any flag passed is valid
  * @c: the flag
@@ -14,12 +16,10 @@ int checker(char c, char fl[], int l)
 
 	if (c >= '0' && c <= '9')
 		return (1);
-	else
-	{
-		for (i = 0; i < l; i++)
-			if (c == fl[i])
-				return (0);
-	}
+
+	for (i = 0; i < l; i++)
+		if (c == fl[i])
+			return (0);
 
 	for (i = 0; valid_flags[i]; i++)
 	{
@@ -79,4 +79,12 @@ int flag_checker(char f, long int dig, char func)
 		return (0);
 	}
 
+}
+
+/**
+ * dummyx - dummy func
+ * Return: not
+ */
+void dummyx(void)
+{
 }
