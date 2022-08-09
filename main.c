@@ -12,10 +12,10 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 	char *rot = "Hello";
-	int r, a = 127, aa, bb;
+	long int r, a = LONG_MIN, aa, bb;
 
-	bb = printf("%####o\n", a);
-	aa = _printf("%#####o\n", a);
+	bb = printf("%ld\n", a);
+	aa = _printf("%ld\n", a);
 	printf("%d\n", bb);
 	_printf("%d\n", aa);
 	r = _printf("%R\n", rot);
