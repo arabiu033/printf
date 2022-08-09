@@ -23,7 +23,7 @@ int printf_HEX(va_list heX, char flags[])
 		dig = va_arg(heX, unsigned int);
 
 	for (i = 0; flags[i] != '$'; i++)
-		len += flag_checker(flags[i], dig, 'H');
+		len += flag_checker(flags[i], 1, 'H');
 
 	temp = dig;
 

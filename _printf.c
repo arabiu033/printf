@@ -51,20 +51,15 @@ int _printf(const char *format, ...)
 						 && checker(format[x],
 							    flags, y))
 					{
-					if (y != 0 && flags[y - 1] == format[x])
-					{
-						++x;
-						++i;
-						p = -1;
-					}
-					else
-					{
-						flags[y] = format[x];
-						++y;
-						++x;
-						++i;
-						p = -1;
-					}
+					if (format[x] == format[x + 1]
+					    && format[x] == format[x + 2])
+						break;
+
+					flags[y] = format[x];
+					++y;
+					++x;
+					++i;
+					p = -1;
 					}
 
 					++p;
@@ -89,6 +84,7 @@ int _printf(const char *format, ...)
 					{
 						i = k;
 						_putchar('%');
+						++len;
 						i += 3;
 					}
 					else
