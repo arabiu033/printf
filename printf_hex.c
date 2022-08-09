@@ -22,6 +22,9 @@ int printf_hex(va_list heX, char flags[], int n)
 	else
 		dig = va_arg(heX, unsigned int);
 
+	for (i = 0; flags[i] != '$'; i++)
+		len += flag_checker(flags[i], dig, 'h');
+
 	temp = dig;
 
 	while (temp > 15)

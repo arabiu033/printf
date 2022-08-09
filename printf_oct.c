@@ -20,6 +20,9 @@ int printf_oct(va_list ocT, char flags[], int n)
 	else
 		dig = va_arg(ocT, unsigned int);
 
+	for (i = 0; flags[i] != '$'; i++)
+		len += flag_checker(flags[i], dig, 'o');
+
 	temp = dig;
 
 	while (temp > 7)

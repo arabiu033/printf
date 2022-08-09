@@ -23,6 +23,9 @@ int printf_dec(va_list d, char flags[], int n)
 	else
 		dig = va_arg(d, int);
 
+	for (i = 0; flags[i] != '$'; i++)
+		len += flag_checker(flags[i], dig, '$');
+
 	temp = dig;
 	if (dig < 0)
 	{
