@@ -14,8 +14,8 @@ int main(void)
 	char *rot = "Hello";
 	int r, a = 127, aa, bb;
 
-	bb = printf("% #x\n", a);
-	aa = _printf("% #x\n", a);
+	bb = printf("%llld\n", a);
+	aa = _printf("%llld\n", a);
 	printf("%d\n", bb);
 	_printf("%d\n", aa);
 	r = _printf("%R\n", rot);
