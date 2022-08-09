@@ -22,6 +22,9 @@ int printf_unsigned(va_list inT, char flags[])
 	else
 		dig = va_arg(inT, unsigned int);
 
+	for (i = 0; flags[i] != '$'; i++)
+		len += flag_checker(flags[i], 1, 'h');
+
 	temp = dig;
 
 	while (temp > 9)
