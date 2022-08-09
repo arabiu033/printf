@@ -10,7 +10,7 @@
 int printf_int(va_list inT, char flags[])
 {
 	long int dig, count = 1, len = 0, temp, x, i;
-	char l = '$';
+	char l = '$', ;
 
 	for (i = 0; flags[i] != '$'; i++)
 		if (flags[i] == 'h' || flags[i] == 'l')
@@ -21,6 +21,9 @@ int printf_int(va_list inT, char flags[])
 		dig = (short)va_arg(inT, int);
 	else
 		dig = va_arg(inT, int);
+
+	for (i = 0; flags[i] != '$'; i++)
+		len += flag_checker(flags[i], dig, '$');
 
 	temp = dig;
 	if (dig < 0)
@@ -44,4 +47,49 @@ int printf_int(va_list inT, char flags[])
 		len++;
 	}
 	return (len);
+}
+
+/**
+ * flag_checker - decide the checker
+ * @f: flag
+ * @dig: number
+ * Return: int length
+ */
+int flag_checker(char f, long int dig, char func)
+{
+	switch (f)
+	{
+	case '+':
+		if (dig > 0)
+		{
+			_putchar('+');
+			return (1);
+		}
+	case ' ':
+		if (dig > 0)
+		{
+			_putchar(' ');
+			return (1);
+		}
+	case '#':
+		if (func == 'o' && dig > 0)
+		{
+			_putchar('0');
+			return (1);
+		}
+		if (func == 'h' && dig > 0)
+		{
+			_putchar('0');
+			_putchar('x');
+			return (2);
+		}
+		if (func == 'H' && dig > 0)
+		{
+			_putchar('0');
+			_putchar('X');
+			return (2);
+		}
+	default:
+		return (0);
+	}
 }
