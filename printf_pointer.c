@@ -7,14 +7,13 @@
  *
  * Return: length of the number printed
  */
-int printf_pointer(va_list p, char flags[], int n)
+int printf_pointer(va_list p, char flags[])
 {
 	unsigned long int dig;
 	int len = 0, i;
 	char str[6] = "(nil)";
 
-	if (!n)
-		dig = va_arg(p, unsigned long int);
+	dig = va_arg(p, unsigned long int);
 	for (; !flags[0];)
 		;
 

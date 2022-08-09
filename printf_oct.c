@@ -7,7 +7,7 @@
  *
  * Return: length of the number printed
  */
-int printf_oct(va_list ocT, char flags[], int n)
+int printf_oct(va_list ocT, char flags[])
 {
 	unsigned long int dig, count = 1, len = 0, temp, x, i;
 	char l = '$';
