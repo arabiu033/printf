@@ -46,12 +46,14 @@ int flag_checker(char f, long int dig, char func)
 			_putchar('+');
 			return (1);
 		}
+		return (0);
 	case ' ':
 		if (dig > 0)
 		{
 			_putchar(' ');
 			return (1);
 		}
+		return (0);
 	case '#':
 		if (func == 'o' && dig > 0)
 		{
@@ -70,9 +72,9 @@ int flag_checker(char f, long int dig, char func)
 			_putchar('X');
 			return (2);
 		}
+		return (0);
 	default:
 		return (0);
 	}
 
-	return (0);
 }
