@@ -92,4 +92,6 @@ int flag_checker(char f, long int dig, char func)
 	default:
 		return (0);
 	}
+
+	return (0);
 }
