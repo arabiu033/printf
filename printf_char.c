@@ -3,6 +3,7 @@
 /**
  * printf_char - print a char
  * @ch: char to print
+ * flags: flags
  *
  * Return: no. of characters printed
  */
