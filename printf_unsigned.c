@@ -18,7 +18,7 @@ int printf_unsigned(va_list inT, char flags[])
 	if (l == 'l')
 		dig = va_arg(inT, unsigned long int);
 	if (l == 'h')
-		dig = (unsigned short)va_arg(nT, unsigned int);
+		dig = (unsigned short)va_arg(inT, unsigned int);
 	else
 		dig = va_arg(inT, unsigned int);
 
