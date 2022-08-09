@@ -1,5 +1,4 @@
-												    printf("Unknown:[%r]\n");
-												        return (0);
+
 													}
 															Address:[0x7ffe637541f0]
 													Percent:[%]
