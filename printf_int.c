@@ -6,7 +6,7 @@
  *
  * Return: 1
  */
-int printf_int(va_list inT, char flags[])
+int printf_int(va_list inT, char flags[], int n)
 {
 	long int dig, count = 1, len = 0, temp, x;
 	int i;
@@ -16,7 +16,13 @@ int printf_int(va_list inT, char flags[])
 		_putchar(flags[i]);
 	}
 
-	dig = va_arg(inT, int);
+	if (n == 0)
+		dig = va_arg(inT, int);
+	else if (n == 1)
+		dig = va_arg(inT, int);
+	else if (n == 2)
+		dig = va_arg(inT, long int);
+
 	temp = dig;
 	if (dig < 0)
 	{

@@ -7,7 +7,7 @@
  * @str: string argument
  * Return: length printed
  */
-int printf_exclusive_string(va_list str, char flags[])
+int printf_exclusive_string(va_list str, char flags[], int n)
 {
 	char *s;
 	int i = 0, len = 0;
@@ -15,7 +15,8 @@ int printf_exclusive_string(va_list str, char flags[])
 	for (; !flags[0];)
 		;
 
-	s = va_arg(str, char *);
+	if (!n)
+		s = va_arg(str, char *);
 	if (!s)
 		s = "(null)";
 	for (i = 0; s[i]; i++)

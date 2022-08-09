@@ -6,7 +6,7 @@
  *
  * Return: len of string
  */
-int printf_string(va_list s, char flags[])
+int printf_string(va_list s, char flags[], int n)
 {
 	char *str;
 	int i = 0;
@@ -14,7 +14,8 @@ int printf_string(va_list s, char flags[])
 	for (; !flags[0];)
 		;
 
-	str = va_arg(s, char *);
+	if (!n)
+		str = va_arg(s, char *);
 	if (!str)
 		str = "(null)";
 

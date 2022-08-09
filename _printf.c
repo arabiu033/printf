@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 		{'X', printf_HEX},{'S', printf_exclusive_string},
 		{'p', printf_pointer}, {'R', printf_rot13}, {'r', printf_srev}
 	};
-	int i = 0, len = 0, p, sig = 1, y = 0, sig1 = 1, k, x;
+	int i = 0, len = 0, p, sig = 1, y = 0, sig1 = 1, k, x, mod = 0;
 	va_list vars;
 	char flags[5] = {'$', '$', '$', '$', '$'};
 
@@ -38,7 +38,11 @@ int _printf(const char *format, ...)
 				{
 					if (speci[p].sp == format[x])
 					{
-						len += speci[p].f(vars, flags);
+						if (format[x - 1] == 'h')
+							mod = 1;
+						else if (format[x - 1] == 'l')
+							mod = 2;
+						len += speci[p].f(vars, flags, mod);
 						i += 2;
 						sig = 0;
 						sig1 = 0;

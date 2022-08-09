@@ -6,11 +6,17 @@
  *
  * Return: length of printed int
  */
-int printf_unsigned(va_list inT, char flags[])
+int printf_unsigned(va_list inT, char flags[], int n)
 {
-	unsigned int dig, count = 1, len = 0, temp, x, i;
+	unsigned long int dig, count = 1, len = 0, temp, x, i;
 
-	dig = va_arg(inT, unsigned int);
+	if (n == 0)
+		dig = va_arg(inT, unsigned int);
+	else if (n == 1)
+		dig = va_arg(inT, unsigned int);
+	else if (n == 2)
+		dig = va_arg(inT, unsigned long int);
+
 	temp = dig;
 
 	for (i = 0; flags[i] != '$'; i++)

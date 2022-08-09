@@ -6,14 +6,19 @@
  *
  * Return: length of the number printed
  */
-int printf_HEX(va_list heX, char flags[])
+int printf_HEX(va_list heX, char flags[], int n)
 {
 	unsigned long int dig, count = 1, len = 0, temp, x;
 
 	for (; !flags[0];)
 		;
 
-	dig = va_arg(heX, unsigned int);
+	if (n == 0)
+		dig = va_arg(heX, unsigned int);
+	else if (n == 1)
+		dig = va_arg(heX, unsigned int);
+	else if (n == 2)
+		dig = va_arg(heX, unsigned long int);
 	temp = dig;
 
 	while (temp > 15)

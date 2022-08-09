@@ -6,14 +6,20 @@
  *
  * Return: 1
  */
-int printf_dec(va_list d, char flags[])
+int printf_dec(va_list d, char flags[], int n)
 {
 	long int dig, count = 1, len = 0, temp, x;
 
 	for (; !flags[0];)
 		;
 
-	dig = va_arg(d, int);
+	if (n == 0)
+		dig = va_arg(d, int);
+	else if (n == 1)
+		dig = va_arg(d, int);
+	else if (n == 2)
+		dig = va_arg(d, long int);
+
 	temp = dig;
 	if (dig < 0)
 	{

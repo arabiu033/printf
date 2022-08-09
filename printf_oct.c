@@ -6,14 +6,19 @@
  *
  * Return: length of the number printed
  */
-int printf_oct(va_list ocT, char flags[])
+int printf_oct(va_list ocT, char flags[], int n)
 {
-	unsigned int dig, count = 1, len = 0, temp, x;
+	unsigned long int dig, count = 1, len = 0, temp, x;
 
 	for (; !flags[0];)
 		;
 
-	dig = va_arg(ocT,unsigned int);
+	if (n == 0)
+		dig = va_arg(ocT, unsigned int);
+	else if (n == 1)
+		dig = va_arg(ocT, unsigned int);
+	else if (n == 2)
+		dig = va_arg(ocT, unsigned long int);
 	temp = dig;
 
 	while (temp > 7)
