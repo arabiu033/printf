@@ -14,14 +14,11 @@ int checker(char c, char fl[], int l)
 
 	if (c >= '0' && c <= '9')
 		return (1);
-	if (c == 'q')
-		return (0);
-	else
-	{
-		for (i = 0; i < l; i++)
-			if (c == fl[i])
-				return (0);
-	}
+
+	for (i = 0; i < l; i++)
+		if (c == fl[i])
+			return (0);
+
 	for (i = 0; valid_flags[i]; i++)
 	{
 		if (c == valid_flags[i])
