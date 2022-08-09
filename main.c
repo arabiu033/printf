@@ -12,8 +12,10 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 	char *rot = "Hello";
-	int r;
+	int r, a = 127;
 
+	printf("%+d\n", a);
+	_printf("%+d\n", a);
 	printf("%9li\n");
 	r = _printf("%R\n", rot);
 	_printf("%d\n", r);
