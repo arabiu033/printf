@@ -48,16 +48,20 @@ int flag_checker(char f, long int dig, char func)
 		if (dig > 0)
 		{
 			if (func == '$')
+			{
 				_putchar('+');
-			return (1);
+				return (1);
+			}
 		}
 		return (0);
 	case ' ':
 		if (dig > 0)
 		{
 			if (func == '$')
+			{
 				_putchar(' ');
-			return (1);
+				return (1);
+			}
 		}
 		return (0);
 	case '#':

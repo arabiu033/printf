@@ -40,8 +40,8 @@ int main(void)
 	printf("Unsigned:[%+u]\n", UINT_MAX);
 	_printf("Unsigned:[%hhhhu]\n", UINT_MAX);
 	printf("Unsigned:[%hhhhu]\n", UINT_MAX);
-	_printf("Unsigned octal:[%+o]\n", ui);
-	printf("Unsigned octal:[%+o]\n", ui);
+	_printf("Unsigned octal:[% o]\n", ui);
+	printf("Unsigned octal:[% o]\n", ui);
 	_printf("Unsigned hexadecimal:[%+x, %X]\n", ui, ui);
 	printf("Unsigned hexadecimal:[%+x, %X]\n", ui, ui);
 	_printf("Character:[%c]\n", 'H');
