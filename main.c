@@ -12,9 +12,12 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 	char *rot = "Hello";
-	int r;
+	int r, a = 127, aa, bb;
 
-	printf("%9li\n");
+	bb = printf("%llld\n", a);
+	aa = _printf("%llld\n", a);
+	printf("%d\n", bb);
+	_printf("%d\n", aa);
 	r = _printf("%R\n", rot);
 	_printf("%d\n", r);
 	len = _printf("Let's try to printf a simple sentence.\n");

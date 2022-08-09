@@ -7,7 +7,7 @@
 
 The printf function sends formatted output to stdout.
 A custom _printf() for learning purposes was developed by cohort  #8 students Aminu Rabiu and Lateef Odufeso.
-_printf() function format string is a character string, beginning and ending in its initial shift state, if any. 
+_printf() function format string is a character string, beginning and ending in its initial shift state, if any.
 These arguments are placed using the percentage '%' operator
 
 ------------
@@ -120,7 +120,7 @@ Specifier                |Output                        |Examples |
 |----------------|-------------------------------|
 | `.(number)` |**For integer specifiers (`d`, `i`, `o`, `u`, `x`, `X`):** _precision_ specifies the minimum number of digits to be written. If the value to be written is shorter than this number, the result is padded with leading zeros. The value is not truncated even if the result is longer. A _precision_ of 0 means that no character is written for the value 0. **For `s`**: this is the maximum number of characters to be printed. By default all characters are printed until the ending null character is encountered. If the period is specified without an explicit value for _precision_, 0 is assumed. |
 
-### Lenght modifiers (In development...)
+### Length modifiers (In development...)
 
 |Modifier/Specifier  |`d` & `i`  |`u`, `o`, `x`, `X` |`c` |`s` |`p` |
 |----------------|---------|------------|-------------|-----|-------|
@@ -142,7 +142,7 @@ Specifier                |Output                        |Examples |
 |`printf_37.c`|Contains percentage print function.|`None` |
 |`printf_int.c` | Contains decimal and integer functions. | `None` | 
 `printf_char.c` | Custom function for char data type. | `None`
-|`printf_sting.c` | Function that calls string type variable. | `None` |
+|`printf_string.c` | Function that calls string type variable. | `None` |
 |`printf_bin.c` | Function that gets the binary | `None` |
 `printf_oct.c` | Functions that returns octal number. | `None` |
 `printf_hex.c` | Calls hexadecimal numbers (lowercase). | `None` | 

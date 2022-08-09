@@ -3,12 +3,16 @@
 /**
  * printf_bin - prints an int in octal form
  * @b: int to print
+ * @flags: flags
  *
  * Return: length of the number printed
  */
-int printf_bin(va_list b)
+int printf_bin(va_list b, char flags[])
 {
 	unsigned int dig, count = 1, len = 0, temp, x;
+
+	for (; !flags[0];)
+		;
 
 	dig = va_arg(b, unsigned int);
 	temp = dig;

@@ -3,14 +3,28 @@
 /**
  * printf_hex - prints an int in octal form
  * @heX: int to print
+ * @flags: flags
  *
  * Return: length of the number printed
  */
-int printf_hex(va_list heX)
+int printf_hex(va_list heX, char flags[])
 {
-	unsigned long int dig, count = 1, len = 0, temp, x;
+	unsigned long int dig, count = 1, len = 0, temp, x, i;
+	char l = '$';
 
-	dig = va_arg(heX, unsigned int);
+	for (i = 0; flags[i] != '$'; i++)
+		if (flags[i] == 'h' || flags[i] == 'l')
+			l = flags[i];
+	if (l == 'l')
+		dig = va_arg(heX, unsigned long int);
+	else if (l == 'h')
+		dig = (unsigned short int)va_arg(heX, unsigned int);
+	else
+		dig = va_arg(heX, unsigned int);
+
+	for (i = 0; flags[i] != '$'; i++)
+		len += flag_checker(flags[i], dig, 'h');
+
 	temp = dig;
 
 	while (temp > 15)

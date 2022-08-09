@@ -3,14 +3,28 @@
 /**
  * printf_int - prints an int
  * @inT: int to print
+ * @flags: flags
  *
  * Return: 1
  */
-int printf_int(va_list inT)
+int printf_int(va_list inT, char flags[])
 {
-	long int dig, count = 1, len = 0, temp, x;
+	long int dig, count = 1, len = 0, temp, x, i;
+	char l = '$';
 
-	dig = va_arg(inT, int);
+	for (i = 0; flags[i] != '$'; i++)
+		if (flags[i] == 'h' || flags[i] == 'l')
+			l = flags[i];
+	if (l == 'l')
+		dig = va_arg(inT, long int);
+	else if (l == 'h')
+		dig = (short)va_arg(inT, int);
+	else
+		dig = va_arg(inT, int);
+
+	for (i = 0; flags[i] != '$'; i++)
+		len += flag_checker(flags[i], dig, '$');
+
 	temp = dig;
 	if (dig < 0)
 	{
