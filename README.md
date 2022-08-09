@@ -7,7 +7,7 @@
 
 The printf function sends formatted output to stdout.
 A custom _printf() for learning purposes was developed by cohort  #8 students Aminu Rabiu and Lateef Odufeso.
-_printf() function format string is a character string, beginning and ending in its initial shift state, if any. 
+_printf() function format string is a character string, beginning and ending in its initial shift state, if any.
 These arguments are placed using the percentage '%' operator
 
 ------------
@@ -142,7 +142,7 @@ Specifier                |Output                        |Examples |
 |`printf_37.c`|Contains percentage print function.|`None` |
 |`printf_int.c` | Contains decimal and integer functions. | `None` | 
 `printf_char.c` | Custom function for char data type. | `None`
-|`printf_sting.c` | Function that calls string type variable. | `None` |
+|`printf_string.c` | Function that calls string type variable. | `None` |
 |`printf_bin.c` | Function that gets the binary | `None` |
 `printf_oct.c` | Functions that returns octal number. | `None` |
 `printf_hex.c` | Calls hexadecimal numbers (lowercase). | `None` | 
