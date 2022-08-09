@@ -53,6 +53,7 @@ int printf_int(va_list inT, char flags[])
  * flag_checker - decide the checker
  * @f: flag
  * @dig: number
+ * @func: which function call
  * Return: int length
  */
 int flag_checker(char f, long int dig, char func)
