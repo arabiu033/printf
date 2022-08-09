@@ -84,6 +84,7 @@ int _printf(const char *format, ...)
 					{
 						i = k;
 						_putchar('%');
+						++len;
 						i += 3;
 					}
 					else
