@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	};
 	int i = 0, len = 0, p, sig = 1, y = 0, sig1 = 1, k, x;
 	va_list vars;
-	char flags[5] = {'$', '$', '$', '$', '$'};
+	char flags[10] = {'$', '$', '$', '$', '$', '$', '$', '$', '$', '$'};
 
 	va_start(vars, format);
 	if (!format || (format[0] == '%' && format[1] == '\0'))
@@ -50,11 +50,21 @@ int _printf(const char *format, ...)
 						 && checker(format[x],
 							    flags, y))
 					{
-						flags[y] = format[x];
-						++y;
-						++x;
-						++i;
-						p = -1;
+						if (y != 0
+						    && flags[y-1] == format[x])
+						{
+							++x;
+							++i;
+							p = -1;
+						}
+						else
+						{
+							flags[y] = format[x];
+							++y;
+							++x;
+							++i;
+							p = -1;
+						}
 					}
 
 					++p;
@@ -69,7 +79,14 @@ int _printf(const char *format, ...)
 				else if (sig1)
 				{
 					sig1 = 0;
-					i = k;
+					if (o == 'h' || o == 'l')
+					{
+						i = k;
+						_putchar('%');
+						i += 3;
+					}
+					else
+						i = k;
 				}
 			}
 		}

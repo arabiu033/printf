@@ -14,12 +14,16 @@ int checker(char c, char fl[], int l)
 	int i;
 	char *valid_flags = "hl-+ #0";
 
-	if (c >= '0' && c <= '9')
+	if ((c >= '0' && c <= '9') || (c = ' ' || c == '#' || c == '+'))
 		return (1);
-
+	j = 0;
 	for (i = 0; i < l; i++)
+	{
 		if (c == fl[i])
-			return (0);
+			++j;
+	}
+	if (j > 1)
+		return (0);
 
 	for (i = 0; valid_flags[i]; i++)
 	{
