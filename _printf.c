@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	};
 	int i = 0, len = 0, p, sig = 1, y = 0, sig1 = 1, k, x;
 	va_list vars;
-	char o;
+	char o = '$';
 	char flags[10] = {'$', '$', '$', '$', '$', '$', '$', '$', '$', '$'};
 
 	va_start(vars, format);
@@ -72,13 +72,19 @@ int _printf(const char *format, ...)
 
 				if (sig1 && checker(format[x], flags, y))
 				{
-					flags[y] = format[x];
-					++y;
-					++i;
+					if (y != 0 && flags[y - 1] == format[x])
+						++i;
+					else
+					{
+						flags[y] = format[x];
+						++y;
+						++i;
+					}
 				}
 				else if (sig1)
 				{
 					sig1 = 0;
+					o = format[x];
 					if (o == 'h' || o == 'l')
 					{
 						i = k;
