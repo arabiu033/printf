@@ -7,7 +7,7 @@
  *
  * Return: length of the number printed
  */
-int printf_HEX(va_list heX, char flags[], int n)
+int printf_HEX(va_list heX, char flags[])
 {
 	unsigned long int dig, count = 1, len = 0, temp, x, i;
 	char l;

@@ -7,7 +7,7 @@
  *
  * Return: 1
  */
-int printf_dec(va_list d, char flags[], int n)
+int printf_dec(va_list d, char flags[])
 {
 	long int dig, count = 1, len = 0, temp, x, i;
 

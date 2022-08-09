@@ -15,8 +15,7 @@ int printf_srev(va_list r, char flags[])
 	for (; !flags[0];)
 		;
 
-	if (!n)
-		str = va_arg(r, char *);
+	str = va_arg(r, char *);
 	if (!str)
 		str = "(llun)";
 	for (i = 0; str[i]; i++)

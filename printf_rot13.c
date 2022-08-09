@@ -17,8 +17,7 @@ int printf_rot13(va_list R, char flags[])
 	for (; !flags[0];)
 		;
 
-	if (!n)
-		str = va_arg(R, char *);
+	str = va_arg(R, char *);
 	if (!str)
 		str = "(ahyy)";
 
