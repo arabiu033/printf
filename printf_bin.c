@@ -3,6 +3,7 @@
 /**
  * printf_bin - prints an int in octal form
  * @b: int to print
+ * flags: flags
  *
  * Return: length of the number printed
  */
