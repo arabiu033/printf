@@ -10,7 +10,7 @@
 int checker(char c, char fl[], int l)
 {
 	int i;
-	char *valid_flags = "disrRuoxXpbc%S";
+	char *valid_flags = "hl-+ #0";
 
 	if (c >= '0' && c <= '9')
 		return (1);
