@@ -28,3 +28,51 @@ int checker(char c, char fl[], int l)
 	}
 	return (0);
 }
+
+/**
+ * flag_checker - decide the checker
+ * @f: flag
+ * @dig: number
+ * @func: which function call
+ * Return: int length
+ */
+int flag_checker(char f, long int dig, char func)
+{
+	switch (f)
+	{
+	case '+':
+		if (dig > 0)
+		{
+			_putchar('+');
+			return (1);
+		}
+	case ' ':
+		if (dig > 0)
+		{
+			_putchar(' ');
+			return (1);
+		}
+	case '#':
+		if (func == 'o' && dig > 0)
+		{
+			_putchar('0');
+			return (1);
+		}
+		if (func == 'h' && dig > 0)
+		{
+			_putchar('0');
+			_putchar('x');
+			return (2);
+		}
+		if (func == 'H' && dig > 0)
+		{
+			_putchar('0');
+			_putchar('X');
+			return (2);
+		}
+	default:
+		return (0);
+	}
+
+	return (0);
+}
