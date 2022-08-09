@@ -3,6 +3,7 @@
 /**
  * printf_int - prints an int
  * @inT: int to print
+ * @flags: flags
  *
  * Return: 1
  */

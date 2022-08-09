@@ -3,6 +3,7 @@
 /**
  * printf_string - prints a string
  * @s: string to print
+ * @flags: flags
  *
  * Return: len of string
  */

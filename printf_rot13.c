@@ -3,6 +3,7 @@
 /**
  * printf_rot13 - prints the rot13'ed string
  * @R: the string to be rot13'ed
+ * @flags: flags
  *
  * Return: the number of characters printed
  */

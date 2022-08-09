@@ -3,6 +3,7 @@
 /**
  * printf_pointer - prints an int in octal form
  * @p: int to print
+ * @flags: flags
  *
  * Return: length of the number printed
  */

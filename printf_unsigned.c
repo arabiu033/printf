@@ -3,6 +3,7 @@
 /**
  * printf_unsigned - Returns an unisgined data type.
  * @inT: unsigned int to print
+ * @flags: flags
  *
  * Return: length of printed int
  */

@@ -3,6 +3,7 @@
 /**
  * printf_HEX - prints an int in octal form
  * @heX: int to print
+ * @flags: flags
  *
  * Return: length of the number printed
  */

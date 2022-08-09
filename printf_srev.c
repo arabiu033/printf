@@ -3,6 +3,7 @@
 /**
  * printf_srev - reverses the contents of an array
  * @r: string to be reversed
+ * @flags: flags
  *
  * Return: number of characters printed
  */
