@@ -3,6 +3,7 @@
 /**
  * printf_dec - prints an int
  * @d: int to print
+ * flags: flags
  *
  * Return: 1
  */
