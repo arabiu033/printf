@@ -3,7 +3,7 @@
 /**
  * printf_37 - prints %
  * @percentage: ascii 37
- * @flags: flagss
+ * @flags: flags
  *
  * Return: 1
  */
