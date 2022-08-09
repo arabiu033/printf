@@ -39,4 +39,9 @@ int printf_HEX_aux(unsigned long int n);
 int printf_rot13(va_list R, char flags[]);
 int printf_srev(va_list r, char flags[]);
 int checker(char c, char flags[], int l);
+
+
+int short_i(va_list);
+int long_i(va_list);
+
 #endif
