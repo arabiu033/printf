@@ -189,7 +189,7 @@ Handle the following conversion specifiers:
 - X
 
 
-(Additionals task to be added upon completion here...)
+(Additionals task to be added upon handled and completion here...)
 
 ### Authors &copy;
 
